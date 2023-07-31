@@ -11,3 +11,4 @@ map = pygame.transform.scale(map, size)
 
 pointer = pygame.image.load("pointer.png").convert()
 pointer = pygame.transform.scale(pointer, (90, 50))
+pointer.set_colorkey((0, 0, 0))

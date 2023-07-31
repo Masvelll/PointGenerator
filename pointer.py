@@ -8,10 +8,18 @@ class Pointer():
     """Класс указателя рандомного положения"""
     def __init__(self):
         self.image = pointer
+        self.rect = self.image.get_rect()
         x = random.randrange(0, size[0])
         y = random.randrange(0, size[1])
-        self.pos = (x, y)
+        self.pos = (self.rect.bottom, self.rect.centery)
     
     def update(self):
         screen.blit(self.image, self.pos)
-        print(f"Drawed, position -> {self.pos}")
+    
+    def change_pos(self):
+        x = random.randrange(0, size[0])
+        y = random.randrange(0, size[1])
+        
+        self.pos = (x, y)
+        
+        

@@ -13,6 +13,8 @@ while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
+        if event.type == pygame.MOUSEBUTTONUP:
+            ptr.change_pos()
             
     screen.blit(map, (0, 0))
     ptr.update()
